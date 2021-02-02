@@ -13,7 +13,7 @@ from atoken import DBInformation as DBI
 
 sql = connect (
     user = DBI.usr(),
-    password = DBI.pas(),
+    password = DBI.pas().
     database = DBI.dbn()
 )
 
@@ -94,7 +94,7 @@ for now in gen():
                 db.execute('update user set word%s="%s" , tday="False"  where   id="%s"' %(l,q[1],id) )
                 sql.commit()
             
-            osend ({'type':'TEXT','body':smsg,'to':id})
+            osend ({'type':'tEXT','body':smsg,'to':id})
 
             db.execute('update  user set flo="1.1"  where id="%s"' %id )
             sql.commit()
